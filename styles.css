@@ -27,12 +27,20 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #555; 
+  color: #cccccc; 
   font-weight: bold;
+  transition: 0.1s ease;
+}
+
+.nav a:hover {
+  color: #eeeeee;
+  text-decoration: underline;
 }
 
 .hero {
-  background-image: url("mountains.webp");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("mountains.webp");
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -72,6 +80,7 @@ body {
 }
 
 .form-section h3 {
+  color: #4d4d4d;
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
@@ -101,12 +110,19 @@ textarea::placeholder {
 .submit-btn {
   background-color: #0077cc;
   color: white;
+  width: 100%;
   padding: 14px 28px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   outline: none;
+  text-align: center;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #245a8f;
 }
 
 textarea:focus {
@@ -116,13 +132,17 @@ textarea:focus {
 .footer {
   margin-top: auto;
   background-color: #333;
-  color: #555;
+  color: #cccccc;
   padding: 20px;
   text-align: center;
   font-size: 14px;
 }
 
-.icon {
+.phone-icon {
+  width: 18px;
+  height: 18px;
+  fill: #eeeeee;       /* change this to any color you want */
+  vertical-align: -3px;
   font-size: 24px;
   margin-right: 10px;
 }
