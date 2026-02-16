@@ -78,6 +78,9 @@ Changed `body` color from `#999999` to `#575757`
 ### Revisiting Hero Section Contrast
 Increased `background-image` `linear-gradient` overlay from `0.45`–`0.55` to `0.55`–`0.6`.
 
+### Firefox Audit After Changes
+![Screenshot of Firefox audit after above changes mad](assets/part3-firefox/firefox-audit-v2.png)
+
 ## PART 4: Final Pass
 1. Changed hero section from a `<header>` to a `<section>`
 2. Wrapped `<nav>` in a `<header>`
