@@ -6,11 +6,11 @@ html {
 body {
   margin: 0 auto;
   font-family: "Segoe UI", sans-serif;
-  color: #999;
+  color: #575757;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  border: 0 1px solid rgba(255, 255, 255, 0.77);
+  border: 1px solid rgba(255, 255, 255, 0.77);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -32,14 +32,14 @@ nav a {
   transition: 0.1s ease;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
   color: #eeeeee;
   text-decoration: underline;
 }
 
 .hero {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.6)),
     url("mountains.webp");
   background-size: cover;
   background-position: center;
@@ -47,13 +47,14 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: lightpink;
+  color: #ffc5cd;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 48px;
   margin: 0;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8)
 }
 
 .content {
@@ -62,7 +63,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.content h3 {
+.content h2 {
   font-size: 28px;
   margin-bottom: 10px;
 }
@@ -79,7 +80,7 @@ nav a:hover {
   margin: 0 auto 100px;
 }
 
-.form-section h3 {
+.form-section h2 {
   color: #4d4d4d;
   text-align: center;
   font-size: 28px;
@@ -102,11 +103,11 @@ textarea {
   font-family: inherit;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #999;
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4d4d4d;
 }
-
 .submit-btn {
   background-color: #0077cc;
   color: white;
@@ -116,7 +117,6 @@ textarea::placeholder {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  outline: none;
   text-align: center;
 }
 
@@ -125,8 +125,13 @@ textarea::placeholder {
   background-color: #245a8f;
 }
 
+.submit-btn:focus {
+  outline: 2px solid #245a8f;
+  outline-offset: 2px;
+}
+
 textarea:focus {
-  outline: none;
+  outline: 2px solid blue;
 }
 
 .footer {
@@ -141,7 +146,7 @@ textarea:focus {
 .phone-icon {
   width: 18px;
   height: 18px;
-  fill: #eeeeee;       /* change this to any color you want */
+  fill: #eeeeee;      
   vertical-align: -3px;
   font-size: 24px;
   margin-right: 10px;
